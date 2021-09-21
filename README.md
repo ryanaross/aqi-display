@@ -40,3 +40,6 @@ Attach the G7 Adapter to the sensor. Connect the included adapter cable and cut 
 | TX       | 25        |
 
 The T-Display schematic can be found [here](https://user-images.githubusercontent.com/25242404/79798978-70c1bc80-8362-11ea-89e7-cee3a98e8508.png).
+
+### Case
+The components can be taped together quite easily. But if you have access to a 3d printer you can use the included STL files (in the `case/` directory) to print a case and fit the components inside.
