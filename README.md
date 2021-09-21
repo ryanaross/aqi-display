@@ -5,12 +5,11 @@ A small box which will display the **Air Quality Index** based on the US EPA for
 ![t-display image](./images/aqi-display.png)]
 
 ### Features
-* Front button to begin gathering on demand
 * 30 seconds of data gathering and averaging of particle count to calculate AQI
 * Color changing background based on AQI value
 * Displays latest calculated value every minute for the first 10 minutes. Then goes into a **Sleep Mode** to preserve the sensors fan, calculating a new AQI value every 30 minutes.
 * Written in micropython, everything is easily configurable.
-
+* Front button to begin gathering on demand
 ## Assembly
 
 ### Parts Required:
