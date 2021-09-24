@@ -2,12 +2,12 @@
 
 A small box which will display the **Air Quality Index** based on the US EPA formula, using a $15 sensor and $10 microcontroller and display. As the AQI climbs, the background color changes, matching the colors used on [PurpleAir](https://map.purpleair.com/). The display is a 1.1" TFT, bright enough to be seen in daylight from across a large room.
 
-![t-display image](./images/aqi-display.png)]
+![t-display image](./images/5612809.gif)
 
 ### Features
 * 30 seconds of data gathering and averaging of particle count to calculate AQI
 * Color changing background based on AQI value
-* Displays latest calculated value every minute for the first 10 minutes. Then goes into a **Sleep Mode** to preserve the sensors fan, calculating a new AQI value every 30 minutes.
+* Displays latest calculated value every 1 minute for the first 30 minutes. Then goes into a **Sleep Mode** to preserve the sensors fan, calculating a new AQI value every 30 minutes.
 * Written in micropython, everything is easily configurable.
 * Front button to begin gathering on demand
 ## Assembly
@@ -15,11 +15,11 @@ A small box which will display the **Air Quality Index** based on the US EPA for
 ### Parts Required:
 1. LILYGO® TTGO T-Display ESP32 [aliexpress](https://lilygo.aliexpress.com/store/2090076/search?SearchText=esp32+t-display)
 
-![t-display image](./images/t-display.png)]
+![t-display image](./images/t-display.png)
 
 2. Plantower PMS7003 Air Quality Sensor + G7 Adapter [aliexpress](https://www.aliexpress.com/wholesale?trafficChannel=main&d=y&CatId=0&SearchText=pms7003+g7&ltype=wholesale&SortType=total_tranpro_desc&groupsort=1&page=1)
 
-![t-display image](./images/pms7003.png)]
+![t-display image](./images/pms7003.png)
 
 ### Software
 

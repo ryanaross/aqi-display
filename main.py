@@ -2,22 +2,24 @@ from machine import Pin, SPI
 from pms7003 import Pms7003
 from aqi_calc import AQI
 import aqi_font
+import aqi_calc
 import time
 import st7789  # custom firmware from https://github.com/russhughes/st7789_mpy
 
 # How long to warm up fan before beginning to gather data
 STARTUP_SEC = 60
 # How long to do 1 minute refreshes before switching into Sleep Mode
-SLEEP_MODE_SWITCH_SEC = 600
+SLEEP_MODE_SWITCH_SEC = 1800
 # How many seconds to put the sensor to sleep between sleeps during Sleep Mode
 SLEEP_MODE_SEC = 1800
 
-# Current state: one of `warming_up`, `gathering_data`, `sleeping`, `waiting`
+# Current state one of `warming_up`, `gathering_data`, `sleeping`, `waiting`
 state = "warming_up"
 buttonPushed = False
 
-# Initialize components
+# initialize components
 pms = Pms7003()
+
 spi = SPI(1, baudrate=30000000, sck=Pin(18), mosi=Pin(19))
 tft = st7789.ST7789(
     spi,
@@ -30,7 +32,7 @@ tft = st7789.ST7789(
     rotation=1)
 tft.init()
 
-# Record startup time to determine when it is time to transition into Sleep Mode
+# record startup time
 startTime = time.time()
 
 # Let the sensor warm and display a progress bar
@@ -48,6 +50,8 @@ def wakeUp():
         count = count + 1
         tft.fill_rect(0, 0, int(count*(240/STARTUP_SEC)), 135, st7789.GREEN)
         time.sleep(1)
+
+# Gathers PM2.5 data for 30 seconds
 
 
 def gatherData():
@@ -69,6 +73,8 @@ def gatherData():
     aqi = AQI.aqi(pms2)
     print("AQI: " + str(int(aqi)))
     return aqi
+
+# Display the given AQI (integer, required)
 
 
 def displayAQI(aqi):
