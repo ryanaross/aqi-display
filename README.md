@@ -29,7 +29,7 @@ Then you can copy to the device all the `*.py` files from this repository and cu
 
 ### Hardware
 
-Attach the G7 Adapter to the sensor. Connect the included adapter cable and cut off the other end to expose the wires. Strip, connect and solder the following connections:
+Attach the G7 Adapter to the PMS7003 sensor, it will only fit one way. Connect the included cable to the adapter and cut off the other end to expose the wires. Strip, connect and solder the following connections:
 
 | PMS7003     | T-Display   |
 | ----------- | ----------- |
@@ -41,6 +41,6 @@ Attach the G7 Adapter to the sensor. Connect the included adapter cable and cut 
 The T-Display schematic can be found [here](https://user-images.githubusercontent.com/25242404/79798978-70c1bc80-8362-11ea-89e7-cee3a98e8508.png).
 
 ### Case
-The components can be taped together quite easily. But if you have access to a 3d printer you can use the included STL files (in the `case/` directory) to print a case and fit the components inside. It uses a sliding dovetail top which can be printed separately.
+The two components can be taped together quite easily. But if you have access to a 3d printer you can use the included STL files (in the `case/` directory) to print a case and fit the components inside. It uses a sliding dovetail top which can be printed separately.
 
 ![case](./images/case.png)]
