@@ -10,6 +10,7 @@ A small box which will display the **Air Quality Index** based on the US EPA for
 * Displays latest calculated value every 1 minute for the first 30 minutes. Then goes into a **Sleep Mode** to preserve the sensors fan, calculating a new AQI value every 30 minutes.
 * Written in micropython, everything is easily configurable.
 * Front button to begin gathering on demand
+* Can be made portable with the use of a USB Power Bank
 ## Assembly
 
 ### Parts Required:
